@@ -5,11 +5,11 @@ import { DashboardView } from "./components/DashboardView";
 import { ProveedoresView } from "./components/ProveedoresView";
 import { ItemsView } from "./components/ItemsView";
 import { SolicitudesView } from "./components/SolicitudesView";
-import { ComprasView } from "./components/ComprasView";
-import { InventarioView } from "./components/InventarioView";
+import { ComprasExpandedView } from "./components/ComprasExpandedView";
+import { InventarioExpandedView } from "./components/InventarioExpandedView";
 import { PrestamosView } from "./components/PrestamosView";
 import { TraspasosView } from "./components/TraspasosView";
-import { ReportesView } from "./components/ReportesView";
+import { ReportesExpandedView } from "./components/ReportesExpandedView";
 import { AdminView } from "./components/AdminView";
 
 export type ViewType =
@@ -48,15 +48,15 @@ export default function App() {
       case "solicitudes":
         return <SolicitudesView userRole={userRole} />;
       case "compras":
-        return <ComprasView />;
+        return <ComprasExpandedView />;
       case "inventario":
-        return <InventarioView />;
+        return <InventarioExpandedView />;
       case "prestamos":
         return <PrestamosView userRole={userRole} />;
       case "traspasos":
         return <TraspasosView />;
       case "reportes":
-        return <ReportesView />;
+        return <ReportesExpandedView />;
       case "admin":
         return <AdminView />;
       default:
